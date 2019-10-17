@@ -1,17 +1,16 @@
 <?php
 
+include 'conexao.php';
+
 $codProduto = $_POST['codProduto']; //recebe o valor do atributo
 $nomeProduto = $_POST['nomeProduto'];
 $qtdProduto = $_POST['qtdProduto'];
 $categoria = $_POST['categoria'];
 $fornecedor = $_POST['fornecedor'];
 
-echo 'Código: ', $codProduto;
-echo '\nNome:', $nomeProduto;
-echo '\nQuantidade: ', $qtdProduto;
-echo '\nCategoria: ', $categoria;
-echo '\nFornecedor: ', $fornecedor;
 
-$nomeProduto = nl2br($nomeProduto);
-echo $nomeProduto;
+$sql = "INSERT INTO `estoque`(`codigoproduto`, `nomeproduto`, `quantidade`, `categoria`, `fornecedor`) VALUES ($codProduto,'$nomeProduto',$qtdProduto,'$categoria','$fornecedor')";
+
+$inserir =  mysqli_query($conexao,$sql);
+
 ?>
