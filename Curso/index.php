@@ -23,25 +23,25 @@
 <body>
 	<div class="container" id="tamanhoContainer" style="margin-top: 100px">
 		<h4 style="text-align: center;">Formulário para cadastro</h4>
-		<form style="margin-top: 50px">
+		<form action="_inserir_produto.php" method="post" style="margin-top: 50px">
 			<div class="form-group">
 				<label>Código do produto</label>
-				<input type="number" class="form-control" placeholder="Informe o código do produto">
+				<input type="number" class="form-control" name="codProduto" placeholder="Informe o código do produto" autocomplete="off" required>
 			</div>
 
 			<div class="form-group">
 				<label>Nome do produto</label>
-				<input type="text" class="form-control" placeholder="Informe o nome do produto">
+				<input type="text" class="form-control" name="nomeProduto" placeholder="Informe o nome do produto" autocomplete="off" required>
 			</div>
 
 			<div class="form-group">
 				<label>Quantidade de produtos</label>
-				<input type="number" class="form-control" placeholder="Informe a quantidade">
+				<input type="number" class="form-control" name="qtdProduto" placeholder="Informe a quantidade" required>
 			</div>
 
 			<div class="form-group">
 				<label>Categoria</label>
-				<select class="form-control">
+				<select class="form-control" name="categoria" required>
 					<option>Hardware</option>
 					<option>Software</option>
 					<option>Periféricos</option>
@@ -51,10 +51,11 @@
 
 			<div class="form-group">
 				<label>Fornecedor</label>
-				<select class="form-control">
+				<select class="form-control" name="fornecedor" requireds>
 					<option>Samsung</option>
 					<option>Lenovo</option>
 					<option>Asus</option>
+					<option>Xiaomi</option>
 				</select>
 			</div>
 			<div style="text-align: center;">
