@@ -17,9 +17,10 @@ $atualizar = mysqli_query($conexao, $sql);
 <div class="container" style="width: 400px">
 	<center>
 		<h3>
-			Atualizado com sucesso!	
-			<div style="margin-top: 10px">
-				<a href="listarProdutos.php" class="btn btn-sm btn-primary">Voltar</a>	
-			</div>
+			Atualizado com sucesso!
 		</h3>
+		<?php
+			header("Location: listarProdutos.php");
+			exit;
+		?>
 	</center>

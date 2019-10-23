@@ -17,16 +17,19 @@
 			width: 470px;
 			border-radius: 20px;
 		}
+		#fundo{
+			style="background-color: transparent;"
+		}
 	</style>
 
 </head>
-<body>
+<body style="background: #E6E6FA">
 	<div class="container" id="tamanhoContainer" style="margin-top: 100px">
 		<h4 style="text-align: center;">Formulário para cadastro</h4>
 		<form action="_inserir_produto.php" method="post" style="margin-top: 50px">
 			<div class="form-group">
 				<label>Código do produto</label>
-				<input type="number" class="form-control" name="codProduto" placeholder="Informe o código do produto" autocomplete="off" required>
+				<input style="background-color: transparent;" type="number" class="form-control" name="codProduto" placeholder="Informe o código do produto" autocomplete="off" required>
 			</div>
 
 			<div class="form-group">
@@ -56,6 +59,7 @@
 					<option>Lenovo</option>
 					<option>Asus</option>
 					<option>Xiaomi</option>
+					<option>Outros</option>
 				</select>
 			</div>
 			<div style="text-align: center;">

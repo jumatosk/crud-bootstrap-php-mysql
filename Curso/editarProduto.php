@@ -79,6 +79,7 @@ $id = $_GET['id'];
 						<option>Lenovo</option>
 						<option>Asus</option>
 						<option>Xiaomi</option>
+						<option>Outros</option>
 					</select>
 				</div>
 				<div style="text-align: center;">

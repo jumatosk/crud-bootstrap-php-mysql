@@ -5,7 +5,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="https://kit.fontawesome.com/8786c39b09.js"></script>
 </head>
-<body>
+<body style="background: #E6E6FA">
 	<div class="container" style="margin-top: 50px">
 		<h3>Produtos Cadastrados</h3>
 
@@ -24,7 +24,7 @@
 			<tr>
 				<?php 
 				include 'conexao.php';
-				$sql = "SELECT * FROM estoque";
+				$sql = "SELECT * FROM `estoque`";
 				$busca = mysqli_query($conexao, $sql);
 
 				while($array = mysqli_fetch_array($busca)){
