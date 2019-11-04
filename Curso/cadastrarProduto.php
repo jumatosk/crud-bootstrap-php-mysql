@@ -43,21 +43,25 @@
 			<div class="form-group">
 				<label>Categoria</label>
 				<select class="form-control" name="categoria" required>
-					<option>Hardware</option>
-					<option>Software</option>
-					<option>Periféricos</option>
-					<option>Celulares</option>
+					<?php  
+					include 'conexao.php';
+					$sql = "SELECT * FROM categoria order by nomecategoria ASC";
+					$buscar = mysqli_query($conexao, $sql);
+
+					while($array = mysqli_fetch_array($buscar)){
+						$idcategoria = $array['idcategoria'];
+						$nomecategoria = $array['nomecategoria'];
+
+					?>
+				<option><?php echo $nomecategoria?></option>					
+				<?php } ?>
 				</select>
 			</div>
 
 			<div class="form-group">
 				<label>Fornecedor</label>
-				<select class="form-control" name="fornecedor" requireds>
-					<option>Samsung</option>
-					<option>Lenovo</option>
-					<option>Asus</option>
-					<option>Xiaomi</option>
-					<option>Outros</option>
+				<select class="form-control" name="fornecedor" required>
+				
 				</select>
 			</div>
 			<div style="text-align: right;">
