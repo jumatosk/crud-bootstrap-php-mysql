@@ -58,18 +58,29 @@
 				</select>
 			</div>
 
-			<div class="form-group">
+		<div class="form-group">
 				<label>Fornecedor</label>
 				<select class="form-control" name="fornecedor" required>
-				
+					<?php  
+					include 'conexao.php';
+					$sql2 = "SELECT * FROM fornecedor order by nome ASC";
+					$buscar2 = mysqli_query($conexao, $sql2);
+
+					while($array2 = mysqli_fetch_array($buscar2)){
+						$id = $array2['id'];
+						$nome = $array2['nome'];
+
+					?>
+				<option><?php echo $nome?></option>					
+				<?php } ?>
 				</select>
 			</div>
+
 			<div style="text-align: right;">
 				<a href="index.php" role="button" class="btn btn-sm btn-primary">Voltar</a>
 				<button type="submit" id="botao" class="btn btn-sm">Cadastrar</button>
 			</div>
 		</form>	
-
 
 
 

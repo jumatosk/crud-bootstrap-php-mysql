@@ -39,7 +39,7 @@
 			<div class="card">
 				<div class="card-body">
 					<h5 class="card-title">Deseja cadastrar um novo fornecedor?</h5>
-					<a href="adicionarFornecedor.php" class="btn btn-primary">Cadastrar fornecedor</a>
+					<a href="cadastrarFornecedor.php" class="btn btn-primary">Cadastrar fornecedor</a>
 				</div>
 			</div>
 		</div>
