@@ -2,3 +2,13 @@
 			header("Location: listarProdutos.php");
 			exit;
 		?>
+
+
+PENDENTE
+
+- listarFornecedor.php
+- botao inicio em todas as telas
+- deletarFornecedores.php
+- editarFornecedor.php
+- inserirFornecedor.php
+- 

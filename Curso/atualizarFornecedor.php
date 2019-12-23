@@ -17,7 +17,7 @@ $inserir = mysqli_query($conexao, $sql);
 			Cadastrado com sucesso!
 		</h3>
 		<div style="margin-top: 10px">
-			<a href="index.php" class="btn btn-sm btn-info" style="color: #fff">Início</a>
+			<a href="menu.php" class="btn btn-sm btn-info" style="color: #fff">Início</a>
 			<a href="cadastrarFornecedor.php" class="btn btn-sm btn-primary">Cadastrar fornecedor</a>
 		</div>
 		

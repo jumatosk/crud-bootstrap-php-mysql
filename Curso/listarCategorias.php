@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Lista de produtos</title>
+	<title>Lista de categorias</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="https://kit.fontawesome.com/8786c39b09.js"></script>
 
@@ -22,44 +22,34 @@
 
 </head>
 <body>
-	<div class="container" style="margin-top: 50px">
-		<h3>Produtos Cadastrados</h3>
+	<div class="container" style="margin-top: 40px; width: 500px">
+		<h3>Categorias Cadastradas</h3>
 
 
 		<table class="table table-striped">
 			<thead>
 				<tr>
-					<th scope="col">Código</th>
 					<th scope="col">Nome</th>
-					<th scope="col">Quantidade</th>
-					<th scope="col">Categoria</th>
-					<th scope="col">Fornecedor</th>
 					<th scope="col">Ação</th>
 				</tr>
 			</thead>
 			<tr>
 				<?php 
 				include 'conexao.php';
-				$sql = "SELECT * FROM `estoque`";
+				$sql = "SELECT * FROM `categoria`";
 				$busca = mysqli_query($conexao, $sql);
 
 				while($array = mysqli_fetch_array($busca)){
-					$idEstoque = $array['codigoestoque'];
-					$codProduto = $array['codigoproduto'];
-					$nomeProduto = $array['nomeproduto'];
-					$qtdProduto = $array['quantidade'];
-					$categoria = $array['categoria'];
-					$fornecedor = $array['fornecedor'];
+					$idcategoria = $array['idcategoria'];
+					$nomecategoria = $array['nomecategoria'];
+
 					?>
 					<tr>	
-						<td><?php echo $codProduto ?></td>
-						<td><?php echo $nomeProduto ?></td>
-						<td><?php echo $qtdProduto ?></td>
-						<td><?php echo $categoria ?></td>
-						<td><?php echo $fornecedor ?></td>
-						<td> <a class="btn btn-secondary btn-sm" style="color:#fff" href="editarProduto.php?id=<?php echo $idEstoque ?>" role="button"><i class="far fa-edit"></i>&nbsp;</a>
+						<td><?php echo $nomecategoria ?></td>
 
-							<a class="btn btn-danger btn-sm" style="color:#fff" href="deletarProduto.php?id=<?php echo $idEstoque ?>" role="button"><i class="far fa-trash-alt"></i>&nbsp;</a></td>
+						<td> <a class="btn btn-secondary btn-sm" style="color:#fff" href="editarCategoria.php?idcategoria=<?php echo $idcategoria ?>" role="button"><i class="far fa-edit"></i>&nbsp;</a>
+
+							<a class="btn btn-danger btn-sm" style="color:#fff" href="deletarCategoria.php?idcategoria=<?php echo $idcategoria ?>" role="button"><i class="far fa-trash-alt"></i>&nbsp;</a></td>
 						</tr>
 
 					<?php } ?>

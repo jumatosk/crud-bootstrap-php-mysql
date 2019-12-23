@@ -24,7 +24,7 @@
 <body>
 	<div class="container" id="tamanhoContainer" style="margin-top: 100px">
 		<h4 style="text-align: center;">Formulário para cadastro</h4>
-		<form action="_inserir_produto.php" method="post" style="margin-top: 50px">
+		<form action="inserirProduto.php" method="post" style="margin-top: 50px">
 			<div class="form-group">
 				<label>Código do produto</label>
 				<input type="number" class="form-control" name="codProduto" placeholder="Informe o código do produto" autocomplete="off" required>
@@ -77,7 +77,7 @@
 			</div>
 
 			<div style="text-align: right;">
-				<a href="index.php" role="button" class="btn btn-sm btn-primary">Voltar</a>
+				<a href="menu.php" role="button" class="btn btn-sm btn-primary">Voltar</a>
 				<button type="submit" id="botao" class="btn btn-sm">Cadastrar</button>
 			</div>
 		</form>	
