@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Lista de categorias</title>
+	<title>Lista de Fornecedores</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="https://kit.fontawesome.com/8786c39b09.js"></script>
 
@@ -23,7 +23,7 @@
 </head>
 <body>
 	<div class="container" style="margin-top: 40px; width: 500px">
-		<h3>Categorias Cadastradas</h3>
+		<h3>Fornecedores Cadastrados</h3>
 
 
 		<table class="table table-striped">
@@ -36,21 +36,21 @@
 			<tr>
 				<?php 
 				include 'conexao.php';
-				$sql = "SELECT * FROM `categoria`";
+				$sql = "SELECT * FROM fornecedor";
 				$busca = mysqli_query($conexao, $sql);
 
 				while($array = mysqli_fetch_array($busca)){
-					$idcategoria = $array['idcategoria'];
-					$nomecategoria = $array['nomecategoria'];
+				$id = $array['id'];
+				$nome = $array['nome'];
 
-					?>
-					<tr>	
-						<td><?php echo $nomecategoria ?></td>
+				?>
+				<tr>	
+					<td><?php echo $nome ?></td>
 
-						<td> <a class="btn btn-secondary btn-sm" style="color:#fff" href="editarCategoria.php?idcategoria=<?php echo $idcategoria ?>" role="button"><i class="far fa-edit"></i>&nbsp;</a>
+					<td> <a class="btn btn-secondary btn-sm" style="color:#fff" href="editarFornecedor.php?id=<?php echo $id ?>" role="button"><i class="far fa-edit"></i>&nbsp;</a>
 
-							<a class="btn btn-danger btn-sm" style="color:#fff" href="deletarCategoria.php?idcategoria=<?php echo $idcategoria ?>" role="button"><i class="far fa-trash-alt"></i>&nbsp;</a></td>
-						</tr>
+						<a class="btn btn-danger btn-sm" style="color:#fff" href="deletarFornecedor.php?id=<?php echo $id ?>" role="button"><i class="far fa-trash-alt"></i>&nbsp;</a></td>
+					</tr>
 
 					<?php } ?>
 				</tr>

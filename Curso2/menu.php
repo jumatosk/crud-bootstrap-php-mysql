@@ -5,6 +5,15 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
+<?php
+$_SESSION['usuario'];
+
+if(!isset($_SESSION['usuario'])){
+	header('Location: index.php');
+}
+
+?>
+
 	<div class="container" style="margin-top: 100px">
 
 		<div class="row">
@@ -58,6 +67,15 @@
 				<div class="card-body">
 					<h5 class="card-title">Visualizar fornecedores cadastrados</h5>
 					<a href="listarFornecedor.php" class="btn btn-primary">Listar</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-6" style="margin-top: 20px">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Aprovar Usuários</h5>
+					<a href="aprovarusuario.php" class="btn btn-primary">Aprovar</a>
 				</div>
 			</div>
 		</div>
