@@ -5,3 +5,7 @@
 
 
 https://www.cssmatic.com/box-shadow
+
+Exercício:
+- Listar usuários com opção de editar informações
+- Botão de Logout

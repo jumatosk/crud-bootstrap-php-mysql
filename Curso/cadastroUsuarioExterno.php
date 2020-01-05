@@ -14,7 +14,7 @@
 				<img src="imagem/cadastrousuario.png" width="100px" height="100px">
 			</center>
 		</div>
-		<form action="insertusuario.php" method="post">
+		<form action="insertUsuarioExterno.php" method="post">
 			<div class="form-group">
 				<label>Nome</label>
 				<input type="text" name="nomedeusuario" class="form-control" required autocomplete="off">
@@ -31,17 +31,9 @@
 				<label>Repetir senha</label>
 				<input type="password" name="repetirsenhadeusuario" class="form-control" required autocomplete="off" oninput="validaSenha(this)">
 			</div>
-			<div class="form-group">
-				<label>Nível de acesso</label>
-				<select name="niveldeusuario" class="form-control">
-					<option value="1">Administrador</option>
-					<option value="2">Funcionário</option>
-					<option value="3">Conferente</option>
-				</select>
-			</div>
+
 			<div style="text-align: right;">
 				<a href="index.php" class="btn btn-sm btn-primary">Voltar</a>
-
 				<button type="submit" class="btn btn-sm btn-success">Cadastrar</button>
 			</div>
 		</div>

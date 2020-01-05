@@ -6,10 +6,10 @@ include 'script/password.php';
 $nomeusuario = $_POST['nomedeusuario'];
 $mail = $_POST['email'];
 $senhausuario = $_POST['senhadeusuario'];
-$niveldeusuario = $_POST['niveldeusuario'];
-$statususuario = 'Ativo';
+//$niveldeusuario = $_POST['niveldeusuario'];
+$statususuario = 'Inativo';
 
-$sql = "INSERT INTO usuarios (nomedeusuario, email, senhadeusuario, niveldeusuario, status) VALUES ('$nomeusuario', '$mail', sha1('$senhausuario'), $niveldeusuario, '$statususuario')";
+$sql = "INSERT INTO usuarios (nomedeusuario, email, senhadeusuario, status) VALUES ('$nomeusuario', '$mail', sha1('$senhausuario'), '$statususuario')";
 
 $inserir =  mysqli_query($conexao,$sql);
 
@@ -19,11 +19,11 @@ $inserir =  mysqli_query($conexao,$sql);
 
 <div class="container" style="width: 500px; margin-top: 20px";>
 <center>
-	<h4>Usuário cadastrado com sucesso!</h4>
+	<h4>Usuário cadastrado com sucesso, aguarde aprovação!</h4>
 </center>
 <div style="padding-top: 30px">
 	<center>
-		<a href="menu.php" role="button" class="btn btn-sm btn-info" style="margin: 30px">Menu</a>
+		<a href="index.php" role="button" class="btn btn-sm btn-info" style="margin: 30px">Início</a>
 		<a href="cadastroUsuario.php" role="button" class="btn btn-sm btn-info" style="margin: 30px">Cadastrar</a>
 	</center>
 </div>
