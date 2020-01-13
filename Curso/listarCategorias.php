@@ -47,8 +47,7 @@
 					<tr>	
 						<td><?php echo $nomecategoria ?></td>
 
-						<td> <a class="btn btn-secondary btn-sm" style="color:#fff" href="editarCategoria.php?idcategoria=<?php echo $idcategoria ?>" role="button"><i class="far fa-edit"></i>&nbsp;</a>
-
+						<td><a class="btn btn-secondary btn-sm" style="color:#fff" href="editarCategoria.php?idcategoria=<?php echo $idcategoria ?>" role="button"><i class="far fa-edit"></i>&nbsp;</a>
 							<a class="btn btn-danger btn-sm" style="color:#fff" href="deletarCategoria.php?idcategoria=<?php echo $idcategoria ?>" role="button"><i class="far fa-trash-alt"></i>&nbsp;</a></td>
 						</tr>
 
